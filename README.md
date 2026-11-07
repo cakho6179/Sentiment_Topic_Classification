@@ -53,7 +53,73 @@ reports/                  audit, benchmark, error analysis
 experiments/              metrics, predictions, model artifacts
 ```
 
-## 3. Cài đặt
+## 3. EDA tự động
+
+EDA được gộp trong `src/data/build_dataset.py`. Không cần notebook riêng: mỗi lần build dataset, script tự động phân tích dữ liệu, kiểm tra leakage và xuất báo cáo + biểu đồ.
+
+### Chạy EDA
+
+```powershell
+$env:PYTHONIOENCODING='utf-8'
+
+python -m src.data.build_dataset `
+  --raw data/raw/Vietnamese_Social_Listening_Synthetic_1000.xlsx `
+  --out data/processed `
+  --splits data/splits `
+  --reports reports `
+  --duplicate-threshold 0.90 `
+  --n-splits 7 `
+  --seed 42
+```
+
+### Output EDA
+
+| File | Nội dung |
+|---|---|
+| `reports/data_audit.md` | Báo cáo EDA đầy đủ |
+| `reports/data_audit.json` | Bản machine-readable |
+| `reports/figures/label_distributions.png` | Phân bố sentiment + topic |
+| `reports/figures/brand_distribution.png` | Phân bố brand |
+| `reports/figures/length_distributions.png` | Độ dài target/context |
+| `reports/figures/topic_brand_heatmap.png` | Topic × brand |
+| `reports/figures/sentiment_brand_heatmap.png` | Sentiment × brand |
+| `reports/figures/context_presence_by_topic.png` | Tỷ lệ có context theo topic |
+| `reports/figures/thread_sizes.png` | Số comment/thread |
+| `reports/figures/group_sizes.png` | Số comment/leakage group |
+| `reports/figures/target_type_channel.png` | Target type + channel |
+
+### Nội dung EDA tự động
+
+- Parse và làm sạch dữ liệu từ Excel.
+- Kiểm tra unique `comment_id`, unique `(comment_id, brand)`, topic nhất quán.
+- Phát hiện exact duplicate, near-duplicate (cosine >= ngưỡng) và leakage theo `thread_id`.
+- Tạo split 7-fold `StratifiedGroupKFold` và kiểm tra không có cross-split duplicate.
+- Thống kê phân bố sentiment, topic, brand.
+- Phân tích độ dài target/context, context presence theo topic.
+- Phân tích target type, channel, thread size, leakage group size.
+- Phân tích quan hệ topic × brand, sentiment × brand.
+
+### EDA sau huấn luyện
+
+```powershell
+python -m scripts.aggregate_results `
+  --experiments-dir experiments `
+  --reports-dir reports
+
+python -m scripts.run_error_analysis `
+  --experiments-dir experiments `
+  --processed-dir data/processed `
+  --reports-dir reports `
+  --benchmark reports/benchmark.csv
+```
+
+Các output:
+
+- `reports/benchmark.md` — so sánh model.
+- `reports/error_analysis.md` — lỗi theo brand/topic/context/confidence.
+- `reports/error_examples_sentiment.csv`, `reports/error_examples_topic.csv`.
+
+## 4. Cài đặt
 
 Khuyến nghị Python 3.11+.
 
@@ -63,7 +129,7 @@ python -m pip install -r requirements.txt
 
 `bitsandbytes` chỉ cần cho QLoRA trên Linux/CUDA. Trên Windows, có thể bỏ qua và chạy decoder bằng LoRA không lượng tử hoá.
 
-## 4. Chạy lại toàn bộ baseline
+## 5. Chạy lại toàn bộ baseline
 
 ```powershell
 $env:PYTHONIOENCODING='utf-8'
@@ -91,7 +157,7 @@ python -m scripts.run_error_analysis `
   --benchmark reports/benchmark.csv
 ```
 
-## 5. Chạy encoder
+## 6. Chạy encoder
 
 Ví dụ ViSoBERT cho sentiment:
 
@@ -133,7 +199,7 @@ python -m scripts.run_encoder_suite `
 
 Thêm `--force` để chạy lại experiment đã có metrics.
 
-## 6. Chạy multi-task shared encoder
+## 7. Chạy multi-task shared encoder
 
 ```powershell
 python -m src.training.train_mtl `
@@ -156,7 +222,7 @@ python -m scripts.run_mtl_suite `
 
 Loss topic chỉ được tính trên `comments.csv` (một dòng / unique comment), không lặp theo từng brand.
 
-## 7. Chạy feature fusion (text encoder + brand embedding)
+## 8. Chạy feature fusion (text encoder + brand embedding)
 
 ```powershell
 python -m src.training.train_fusion `
@@ -175,7 +241,7 @@ python -m scripts.run_fusion_suite `
   --seeds 42 43 44
 ```
 
-## 8. Chạy decoder QLoRA
+## 9. Chạy decoder QLoRA
 
 Trên Kaggle/Linux:
 
@@ -209,7 +275,7 @@ python -m src.training.train_decoder `
   --output-dir experiments_smoke
 ```
 
-## 9. Inference
+## 10. Inference
 
 ### Với TF-IDF đã có
 
@@ -271,7 +337,7 @@ Topic được dự đoán một lần cho mỗi `comment_id`; sentiment dự đ
 
 Lưu ý: encoder/MTL inference backend đã được code nhưng mới test end-to-end với TF-IDF; cần test lại sau khi có model lưu từ Kaggle.
 
-## 10. Hybrid encoder + decoder
+## 11. Hybrid encoder + decoder
 
 Sau khi có prediction của 2 model:
 
@@ -286,19 +352,3 @@ python -m scripts.run_hybrid `
 
 Hybrid dùng validation set để chọn `threshold` và `margin`, sau đó mới đánh giá test.
 
-## 11. Những việc còn lại
-
-- [ ] Chạy full encoder/MTL/fusion/decoder trên Kaggle.
-- [ ] Test end-to-end inference backend cho encoder/MTL/decoder.
-- [ ] Bổ sung `pytest` unit tests.
-- [ ] Đóng gói private Kaggle dataset + kernel.
-- [ ] Tổng hợp benchmark cuối, calibration, McNemar, hybrid.
-- [ ] Viết báo cáo kết quả cuối bằng tiếng Việt.
-- [ ] Kiểm tra lại privacy: không publish dữ liệu nội bộ.
-
-## 12. Lưu ý dữ liệu
-
-- Dataset hiện tại là synthetic 1000 dòng, không phải dữ liệu production.
-- Split đã chống leakage theo `thread_id`, exact duplicate và near-duplicate.
-- Không dùng kết quả gần 1.0 để kết luận model tổng quát tốt.
-- Cần chạy lại trên dữ liệu thật trước khi triển khai.
