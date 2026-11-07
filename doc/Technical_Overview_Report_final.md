@@ -111,7 +111,7 @@ Nhiều quy trình tiền xử lý cũ trên mạng áp dụng các quy tắc l�
 
 ### 6. Quy trình Chuẩn hóa Chuỗi (Text Normalization)
 
-Mỗi đoạn văn bản trước khi đưa vào mô hình đều trải qua các bước chuẩn hóa chuẩn mực tại `src/preprocessing/text.py`:
+Mỗi đoạn văn bản trước khi đưa vào mô hình đều trải qua các bước chuẩn hóa chuẩn mực theo quy trình tiền xử lý văn bản:
 1. **Unicode NFC Normalization:** Đồng bộ toàn bộ văn bản về chuẩn dựng sẵn UTF-8 NFC (`unicodedata.normalize("NFC", text)`), giải quyết triệt để lỗi xung đột giữa font tổ hợp và dựng sẵn do các bộ gõ tiếng Việt (Unikey, EVKey) gây ra.
 2. **Dọn dẹp khoảng trắng:** Thay thế khoảng trắng không ngắt (`\u00a0`) thành khoảng trắng thường, gộp các khoảng trắng liên tiếp (`\s+`) thành một khoảng trắng đơn và loại bỏ khoảng trắng thừa ở hai đầu chuỗi.
 3. **Lọc chỉ thị thiếu:** Bất kỳ giá trị nào mang nhãn rác hoặc thiếu (`(không có)`, `không có`, `none`, `nan`, `null`, `n/a`) đều được quy về chuỗi rỗng `""`.
@@ -125,23 +125,27 @@ Tách từ ghép tiếng Việt (ví dụ `xe điện` -> `xe_điện`, `trạm 
   - Nếu đưa chuỗi đã gạch dưới vào (như từ `underthesea.word_tokenize`), tokenizer của ViSoBERT sẽ bị tách vỡ thành các token vụn (`xe`, `_`, `điện`), gây hiện tượng OOV (Out-Of-Vocabulary) giả tạo và làm suy giảm độ chính xác.
 - **Đối với PhoBERT (`vinai/phobert-base-v2`):**
   - **Bắt buộc phân đoạn từ trước khi đưa vào tokenizer**, vì PhoBERT được huấn luyện trên kho ngữ liệu đã tách từ có dấu nối gạch dưới `_`.
-  - Hệ thống tích hợp thư viện **`pyvi`** (tại `src/preprocessing/word_seg.py`). `pyvi` được chọn vì có sự tương thích cao nhất với chuẩn từ điển `VnCoreNLP` của nhóm tác giả PhoBERT, chạy nhanh, không đòi hỏi tải thêm model trọng số nặng bên ngoài như một số phiên bản của `underthesea`.
+  - Hệ thống tích hợp thư viện **`pyvi`** cho nhiệm vụ phân đoạn từ tiếng Việt (Word Segmentation). `pyvi` được chọn vì có sự tương thích cao nhất với chuẩn từ điển `VnCoreNLP` của nhóm tác giả PhoBERT, tốc độ xử lý nhanh, vận hành ổn định và không đòi hỏi tải thêm checkpoint trọng số bên ngoài.
 - **Đối với Baseline TF-IDF + Linear SVM:**
   - TF-IDF truyền thống thường gặp bất lợi do tách rời các từ ghép tiếng Việt thành các âm tiết đơn vô nghĩa.
-  - Dự án giải quyết triệt để vấn đề này bằng kiến trúc **`FeatureUnion`** (`src/models/tfidf.py`), kết hợp:
+  - Dự án giải quyết triệt để vấn đề này bằng kiến trúc **`FeatureUnion`**, kết hợp song song:
     - **Word n-grams (1, 2):** Tự động gom các cụm từ ghép liền kề 2 từ (như "trạm sạc", "bảo hành", "cứu hộ").
     - **Char-wb n-grams (3, 5):** N-gram ký tự bên trong ranh giới từ, giúp bắt được cả gốc từ, từ viết tắt và biến thể teencode.
 
 ### 8. Quy cách Xây dựng Chuỗi Đầu Vào (Task Input Formatting)
 
-Các chuỗi đầu vào được định dạng nhất quán trên toàn bộ các mô hình thông qua `src/preprocessing/text.py`:
+Các chuỗi đầu vào được định dạng nhất quán trên toàn bộ các mô hình theo quy chuẩn cấu trúc sau:
 
 - **Brand-Conditioned Sentiment Input:**
-  $$\text{Input} = \text{"Brand: \{brand\} [SEP] Target: \{target\} [SEP] Context: \{context\}"}$$
+  ```text
+  Brand: {brand} [SEP] Target: {target} [SEP] Context: {context}
+  ```
   *(Nếu `context` rỗng, phần `[SEP] Context: ...` tự động được lược bỏ).*
 - **Topic Classification Input:**
-  $$\text{Input} = \text{"Target: \{target\} [SEP] Context: \{context\}"}$$
-  *(Nếu `context` rỗng, chuỗi chỉ bao gồm `"Target: \{target\}"`).*
+  ```text
+  Target: {target} [SEP] Context: {context}
+  ```
+  *(Nếu `context` rỗng, chuỗi chỉ bao gồm `Target: {target}`).*
 - **Decoder Prompt Template:**
   Sử dụng định dạng hội thoại (Chat Template) có phân định vai trò `System` và `User`, nêu rõ danh sách nhãn hợp lệ (`0 = Negative, 1 = Positive, 2 = Neutral` cho Sentiment và `T01–T13` cho Topic) nhằm loại trừ hoàn toàn việc mô hình sinh nhãn ngoài danh mục.
 - **Ma trận Khảo sát Biến thể (Input Ablation Matrix):**
@@ -275,7 +279,8 @@ Input:
 ```text
 [CLS] Brand: VinFast
 [SEP] Target: Nội dung bình luận
-[SEP]```
+[SEP]
+```
 
 Model dự đoán sentiment cho brand được chỉ định.
 
@@ -297,31 +302,30 @@ Cấu trúc:
 
 ```text
 Target
-  |
+  |
 Shared Encoder
-  |
-  h_target
-       \\
-        Fusion ---- Sentiment Head
-       /
+  |
+  h_target
+        \
+         Fusion ---- Sentiment Head
+       /
 Brand Encoder
-  |
-  h_brand```
+  |
+  h_brand
+```
 
 Biểu diễn fusion:
 
-\[
-
-h_f=[h_t;h_b;|h_t-h_b|;h_t\odot h_b]
-
-\]
+$$
+h_f = [h_t; h_b; |h_t - h_b|; h_t \odot h_b]
+$$
 
 Trong đó:
 
-- \(h_t\): target representation.
-- \(h_b\): brand representation.
-- \(|h_t-h_b|\): absolute difference.
-- \(h_t\odot h_b\): element-wise interaction.
+- $h_t$: target representation.
+- $h_b$: brand representation.
+- $|h_t - h_b|$: absolute difference.
+- $h_t \odot h_b$: element-wise interaction.
 
 Ưu điểm:
 
@@ -374,16 +378,17 @@ Các nghiên cứu multi-label không phải formulation của dự án hiện t
 
 ```text
 Brand + Target (+ Context)
-          |
-   Vietnamese Encoder
-          |
-        Pooling
-          |
-  3-logit Classification Head
-          |
-        Softmax
-          |
- Negative / Positive / Neutral```
+          |
+   Vietnamese Encoder
+          |
+        Pooling
+          |
+  3-logit Classification Head
+          |
+        Softmax
+          |
+ Negative / Positive / Neutral
+```
 
 Input chuẩn: `Brand: {brand} [SEP] Target: {target} [SEP] Context: {context}`. Nếu Context rỗng thì bỏ trường Context; không thay đổi quy tắc giữa các encoder cùng task.
 
@@ -397,16 +402,17 @@ Sentiment là phân loại đơn nhãn 3 lớp, dùng Cross Entropy. Chỉ thử
 
 ```text
 Target + Context (Context được thêm khi tồn tại)
-             |
-    Vietnamese Encoder
-             |
-           Pooling
-             |
-   13-logit Classification Head
-             |
-           Softmax
-             |
-      Argmax: one main topic```
+             |
+    Vietnamese Encoder
+             |
+           Pooling
+             |
+   13-logit Classification Head
+             |
+           Softmax
+             |
+      Argmax: one main topic
+```
 
 #### 13.2. Training objective
 
@@ -421,33 +427,32 @@ Không sử dụng Sigmoid độc lập, BCE, per-label thresholding hoặc mult
 Sau khi có single-task baselines, có thể thử một shared encoder với hai nhánh đầu ra:
 
 ```text
-                 TARGET + CONTEXT
-                         |
-                   Shared Encoder
-                         |
-                   Comment Vector
-                    /          \
-                   /            \
-          Topic Classification   Brand Fusion
-             13 logits              + Brand
-               Softmax                |
-           One topic/comment    Sentiment Head
-                                     3 logits
-                                     Softmax```
+                 TARGET + CONTEXT
+                         |
+                   Shared Encoder
+                         |
+                   Comment Vector
+                    /          \
+                   /            \
+          Topic Classification   Brand Fusion
+             13 logits              + Brand
+               Softmax                |
+           One topic/comment    Sentiment Head
+                                     3 logits
+                                     Softmax
+```
 
 Topic được tính một lần cho mỗi `comment_id`; Sentiment được tính cho từng `(comment_id, brand)`. Khi batching, không nhân bản hoặc tăng trọng số Topic vì một comment xuất hiện ở nhiều dòng brand.
 
 Tổng loss có thể viết:
 
-\[
-
-L = L_{sentiment} + \lambda L_{topic}
-
-\]
+$$
+L = L_{\text{sentiment}} + \lambda L_{\text{topic}}
+$$
 
 Trong đó cả hai loss đều là Cross Entropy; `λ` được chọn trên validation. Topic loss tính một lần trên mỗi `comment_id`; Sentiment loss tính trên từng `(comment_id, brand)`.
 
-Sentiment branch dùng brand representation kết hợp với comment representation, ví dụ `h_f = [h_comment; h_brand; |h_comment - h_brand|; h_comment ⊙ h_brand]`. MTL chỉ được giữ nếu cải thiện hoặc duy trì hợp lý chất lượng của cả hai task; nếu có negative transfer, ưu tiên hai mô hình độc lập.
+Sentiment branch dùng brand representation kết hợp với comment representation, ví dụ $h_f = [h_{\text{comment}}; h_{\text{brand}}; |h_{\text{comment}} - h_{\text{brand}}|; h_{\text{comment}} \odot h_{\text{brand}}]$. MTL chỉ được giữ nếu cải thiện hoặc duy trì hợp lý chất lượng của cả hai task; nếu có negative transfer, ưu tiên hai mô hình độc lập.
 
 ## PART VII. EXPERIMENT DESIGN
 
@@ -559,11 +564,11 @@ Kết quả được so sánh bằng Macro-F1 và các chỉ số theo lớp, đ
 
 ### Open-weight SLM/LLM candidates
 
-17. Qwen Team. *\*Qwen3 Technical Report\** and Qwen3 model repository. https\://github.com/QwenLM/Qwen3
-18. VinAI Research. *\*PhoGPT: Generative Pre-training for Vietnamese\**. https\://arxiv.org/abs/2311.02945
-19. Microsoft. *\*Phi-4-mini-instruct Model Card\**. https\://huggingface.co/microsoft/Phi-4-mini-instruct
-20. Qwen Team. *\*Qwen3.5-4B Model Card\**. https\://huggingface.co/Qwen/Qwen3.5-4B
-21. Sea AI Lab. *\*Sailor2 Model Repository\**. https\://huggingface.co/sail
-22. AI Singapore. *\*SEA-HELM Leaderboard – Vietnamese Performance\**. https\://leaderboard.sea-lion.ai/detailed/VI
+15. Qwen Team. **Qwen3 Technical Report** and Qwen3 model repository. [https://github.com/QwenLM/Qwen3](https://github.com/QwenLM/Qwen3)
+16. VinAI Research. **PhoGPT: Generative Pre-training for Vietnamese**. [https://arxiv.org/abs/2311.02945](https://arxiv.org/abs/2311.02945)
+17. Microsoft. **Phi-4-mini-instruct Model Card**. [https://huggingface.co/microsoft/Phi-4-mini-instruct](https://huggingface.co/microsoft/Phi-4-mini-instruct)
+18. Qwen Team. **Qwen3.5-4B Model Card**. [https://huggingface.co/Qwen/Qwen3.5-4B](https://huggingface.co/Qwen/Qwen3.5-4B)
+19. Sea AI Lab. **Sailor2 Model Repository**. [https://huggingface.co/sail](https://huggingface.co/sail)
+20. AI Singapore. **SEA-HELM Leaderboard – Vietnamese Performance**. [https://leaderboard.sea-lion.ai/detailed/VI](https://leaderboard.sea-lion.ai/detailed/VI)
 
 ---
