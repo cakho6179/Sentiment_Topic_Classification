@@ -1,0 +1,141 @@
+comment_id,brand,split,y_true,y_pred,confidence,topic_id,variant,task,seed
+C000007,Yadea,val,1,1,0.9496615868841055,T01,full_target_marked,sentiment,42
+C000009,Dat Bike,val,0,0,0.9727297938158802,T06,full_target_marked,sentiment,42
+C000018,VinFast,val,1,1,0.8494346824786779,T13,full_target_marked,sentiment,42
+C000022,VinFast,val,1,1,0.9339202605064774,T04,full_target_marked,sentiment,42
+C000030,Toyota,val,0,0,0.9882430913516697,T10,full_target_marked,sentiment,42
+C000034,Yadea,val,0,0,0.925770853299576,T02,full_target_marked,sentiment,42
+C000037,VinFast,val,2,2,0.8914606836731532,T02,full_target_marked,sentiment,42
+C000049,VinFast,val,1,1,0.7394655288435558,T02,full_target_marked,sentiment,42
+C000054,Yadea,val,1,1,0.9896736715143972,T01,full_target_marked,sentiment,42
+C000057,Honda,val,2,2,0.9284549595133837,T03,full_target_marked,sentiment,42
+C000060,Dat Bike,val,2,2,0.9223541329277163,T06,full_target_marked,sentiment,42
+C000063,Honda,val,1,1,0.9731716109888678,T10,full_target_marked,sentiment,42
+C000073,Hyundai,val,2,2,0.9867775693687264,T04,full_target_marked,sentiment,42
+C000089,BYD,val,1,1,0.9733043192380397,T09,full_target_marked,sentiment,42
+C000102,Toyota,val,0,0,0.9912539540421746,T07,full_target_marked,sentiment,42
+C000118,Yadea,val,1,1,0.9483220058614256,T02,full_target_marked,sentiment,42
+C000119,BYD,val,2,2,0.9777641352595859,T09,full_target_marked,sentiment,42
+C000125,Yadea,val,2,2,0.9851921858990611,T10,full_target_marked,sentiment,42
+C000128,Yadea,val,2,2,0.9458173080109309,T01,full_target_marked,sentiment,42
+C000132,Toyota,val,0,0,0.9728967723873999,T10,full_target_marked,sentiment,42
+C000135,VinFast,val,0,0,0.929966445743235,T06,full_target_marked,sentiment,42
+C000142,Honda,val,0,0,0.9825758617587076,T12,full_target_marked,sentiment,42
+C000148,Hyundai,val,2,2,0.9299121048037952,T03,full_target_marked,sentiment,42
+C000152,VinFast,val,2,2,0.9003464458268026,T02,full_target_marked,sentiment,42
+C000158,Dat Bike,val,0,0,0.975152378829931,T06,full_target_marked,sentiment,42
+C000162,VinFast,val,1,1,0.5221580308502896,T06,full_target_marked,sentiment,42
+C000170,Hyundai,val,2,2,0.9399270298790773,T09,full_target_marked,sentiment,42
+C000179,VinFast,val,2,2,0.9969696661618941,T05,full_target_marked,sentiment,42
+C000181,BYD,val,0,0,0.7792820880145223,T11,full_target_marked,sentiment,42
+C000182,Honda,val,1,1,0.9908777733960297,T12,full_target_marked,sentiment,42
+C000185,Toyota,val,1,1,0.9135814631528012,T07,full_target_marked,sentiment,42
+C000200,Yadea,val,1,1,0.9699367833094659,T02,full_target_marked,sentiment,42
+C000209,Hyundai,val,1,1,0.9701175061088869,T05,full_target_marked,sentiment,42
+C000211,Honda,val,2,2,0.992626553703437,T11,full_target_marked,sentiment,42
+C000218,BYD,val,2,2,0.9673323998858606,T06,full_target_marked,sentiment,42
+C000225,Toyota,val,0,0,0.9775127015327651,T03,full_target_marked,sentiment,42
+C000240,Dat Bike,val,1,1,0.9842464384638482,T01,full_target_marked,sentiment,42
+C000245,Hyundai,val,0,0,0.8648135440389084,T04,full_target_marked,sentiment,42
+C000252,BYD,val,2,2,0.9626482993125682,T07,full_target_marked,sentiment,42
+C000253,BYD,val,1,1,0.9205455440719126,T07,full_target_marked,sentiment,42
+C000263,VinFast,val,0,0,0.9241060811569081,T07,full_target_marked,sentiment,42
+C000270,BYD,val,2,2,0.9714278397192097,T06,full_target_marked,sentiment,42
+C000279,Honda,val,2,2,0.9914702117781853,T08,full_target_marked,sentiment,42
+C000281,Dat Bike,val,2,2,0.7898680718304262,T12,full_target_marked,sentiment,42
+C000299,Honda,val,1,1,0.7620997569578228,T08,full_target_marked,sentiment,42
+C000315,VinFast,val,2,2,0.9971486084081033,T07,full_target_marked,sentiment,42
+C000318,VinFast,val,1,1,0.894036574762635,T05,full_target_marked,sentiment,42
+C000325,Dat Bike,val,1,1,0.9319533512963761,T01,full_target_marked,sentiment,42
+C000329,Dat Bike,val,2,2,0.9894575367642761,T11,full_target_marked,sentiment,42
+C000331,Honda,val,2,2,0.9862245944475122,T05,full_target_marked,sentiment,42
+C000334,Yadea,val,2,2,0.9907577992436538,T10,full_target_marked,sentiment,42
+C000335,Toyota,val,2,2,0.9413425401995132,T07,full_target_marked,sentiment,42
+C000339,VinFast,val,2,2,0.9251661114922926,T04,full_target_marked,sentiment,42
+C000347,Yadea,val,1,1,0.9606933638802656,T02,full_target_marked,sentiment,42
+C000348,BYD,val,1,1,0.9626196544982463,T09,full_target_marked,sentiment,42
+C000357,Dat Bike,val,0,0,0.5087872189671395,T11,full_target_marked,sentiment,42
+C000358,Hyundai,val,0,0,0.9102213794830175,T09,full_target_marked,sentiment,42
+C000368,Yadea,val,0,0,0.995266799661207,T01,full_target_marked,sentiment,42
+C000371,Toyota,val,0,0,0.9065112846142399,T03,full_target_marked,sentiment,42
+C000375,Dat Bike,val,2,2,0.9866627024036204,T01,full_target_marked,sentiment,42
+C000384,VinFast,val,2,2,0.9480637428286584,T13,full_target_marked,sentiment,42
+C000387,Hyundai,val,2,2,0.9391937980639508,T05,full_target_marked,sentiment,42
+C000390,VinFast,val,2,2,0.9373101913082209,T08,full_target_marked,sentiment,42
+C000405,Dat Bike,val,2,2,0.9674047251646103,T11,full_target_marked,sentiment,42
+C000420,BYD,val,0,0,0.983284603031533,T07,full_target_marked,sentiment,42
+C000429,Honda,val,2,2,0.8529310497227606,T10,full_target_marked,sentiment,42
+C000442,Dat Bike,val,1,1,0.8495330890292564,T06,full_target_marked,sentiment,42
+C000448,BYD,val,2,2,0.9630493900997702,T08,full_target_marked,sentiment,42
+C000450,Hyundai,val,2,2,0.9522201662241722,T04,full_target_marked,sentiment,42
+C000456,Yadea,val,1,1,0.7761699538362947,T04,full_target_marked,sentiment,42
+C000457,VinFast,val,0,0,0.8754347772989591,T03,full_target_marked,sentiment,42
+C000458,Honda,val,2,2,0.9475630738801258,T08,full_target_marked,sentiment,42
+C000459,Dat Bike,val,2,2,0.964898770772486,T11,full_target_marked,sentiment,42
+C000482,BYD,val,0,0,0.9967607325291902,T09,full_target_marked,sentiment,42
+C000490,Dat Bike,val,1,1,0.9872917111358893,T06,full_target_marked,sentiment,42
+C000493,VinFast,val,2,2,0.9947804964768787,T03,full_target_marked,sentiment,42
+C000494,Dat Bike,val,1,1,0.9726205287338733,T11,full_target_marked,sentiment,42
+C000496,VinFast,val,2,2,0.898833773368165,T12,full_target_marked,sentiment,42
+C000501,BYD,val,0,0,0.9255099071591285,T08,full_target_marked,sentiment,42
+C000509,Dat Bike,val,1,1,0.9907374570392431,T12,full_target_marked,sentiment,42
+C000523,Hyundai,val,0,0,0.918778856330989,T05,full_target_marked,sentiment,42
+C000538,Hyundai,val,2,2,0.9591558516246633,T06,full_target_marked,sentiment,42
+C000548,Hyundai,val,0,0,0.976705197840253,T09,full_target_marked,sentiment,42
+C000551,Honda,val,1,1,0.7797879873565486,T08,full_target_marked,sentiment,42
+C000561,Toyota,val,1,1,0.9528535917057254,T10,full_target_marked,sentiment,42
+C000571,VinFast,val,1,1,0.692595693852272,T02,full_target_marked,sentiment,42
+C000575,Toyota,val,1,1,0.8247375101561197,T11,full_target_marked,sentiment,42
+C000603,BYD,val,0,0,0.9892121128126403,T08,full_target_marked,sentiment,42
+C000604,VinFast,val,0,0,0.8754347772989591,T03,full_target_marked,sentiment,42
+C000619,VinFast,val,1,1,0.9931991083912033,T04,full_target_marked,sentiment,42
+C000625,Honda,val,2,2,0.9747908158336615,T09,full_target_marked,sentiment,42
+C000628,Yadea,val,0,0,0.9972950829910103,T13,full_target_marked,sentiment,42
+C000635,Toyota,val,1,1,0.759626279694808,T05,full_target_marked,sentiment,42
+C000636,Yadea,val,0,0,0.9950775906947928,T13,full_target_marked,sentiment,42
+C000637,Yadea,val,1,1,0.9903058606716552,T10,full_target_marked,sentiment,42
+C000638,VinFast,val,0,0,0.9939681069109848,T09,full_target_marked,sentiment,42
+C000647,VinFast,val,1,1,0.9085842719649359,T02,full_target_marked,sentiment,42
+C000649,VinFast,val,0,0,0.9259666600682926,T02,full_target_marked,sentiment,42
+C000651,Yadea,val,0,0,0.6696051477843531,T13,full_target_marked,sentiment,42
+C000653,Yadea,val,0,0,0.8794210556764694,T04,full_target_marked,sentiment,42
+C000660,Yadea,val,0,2,0.42914678730200745,T07,full_target_marked,sentiment,42
+C000665,VinFast,val,1,1,0.9462269506845081,T13,full_target_marked,sentiment,42
+C000668,BYD,val,2,2,0.9731181628229858,T06,full_target_marked,sentiment,42
+C000669,BYD,val,1,1,0.9847647970257603,T03,full_target_marked,sentiment,42
+C000673,Dat Bike,val,0,0,0.900387974691557,T05,full_target_marked,sentiment,42
+C000684,Yadea,val,1,1,0.9747497553161552,T02,full_target_marked,sentiment,42
+C000693,VinFast,val,2,2,0.9761968847565875,T13,full_target_marked,sentiment,42
+C000710,Toyota,val,2,2,0.980756192279732,T11,full_target_marked,sentiment,42
+C000711,VinFast,val,2,2,0.9563998525145655,T13,full_target_marked,sentiment,42
+C000723,Yadea,val,0,0,0.6895159885347638,T13,full_target_marked,sentiment,42
+C000728,Yadea,val,0,0,0.9698628982068288,T12,full_target_marked,sentiment,42
+C000732,Honda,val,1,1,0.9320601846424964,T11,full_target_marked,sentiment,42
+C000734,Yadea,val,0,0,0.5692286507194247,T04,full_target_marked,sentiment,42
+C000738,Hyundai,val,2,2,0.9491795606587538,T04,full_target_marked,sentiment,42
+C000748,VinFast,val,2,2,0.9928389706971075,T07,full_target_marked,sentiment,42
+C000774,BYD,val,1,1,0.9707571635394666,T03,full_target_marked,sentiment,42
+C000779,Honda,val,2,2,0.9908387977457654,T12,full_target_marked,sentiment,42
+C000780,Toyota,val,0,0,0.8837485697484301,T10,full_target_marked,sentiment,42
+C000792,Honda,val,2,2,0.9507856391659945,T08,full_target_marked,sentiment,42
+C000800,Yadea,val,2,2,0.9257841979334772,T13,full_target_marked,sentiment,42
+C000803,Dat Bike,val,2,2,0.9908115896227582,T01,full_target_marked,sentiment,42
+C000805,Honda,val,1,1,0.9673392417699965,T09,full_target_marked,sentiment,42
+C000812,Dat Bike,val,2,2,0.9837377080251427,T05,full_target_marked,sentiment,42
+C000813,Dat Bike,val,0,1,0.5355583530754754,T12,full_target_marked,sentiment,42
+C000843,Yadea,val,2,2,0.9511789271530221,T13,full_target_marked,sentiment,42
+C000848,Dat Bike,val,0,0,0.9706860789130216,T11,full_target_marked,sentiment,42
+C000858,Honda,val,1,1,0.95164005291263,T12,full_target_marked,sentiment,42
+C000871,BYD,val,0,0,0.9907180879930128,T03,full_target_marked,sentiment,42
+C000873,Honda,val,0,0,0.9868948879380257,T08,full_target_marked,sentiment,42
+C000884,Dat Bike,val,1,1,0.9952174255270189,T10,full_target_marked,sentiment,42
+C000888,Honda,val,1,1,0.9486338093160218,T05,full_target_marked,sentiment,42
+C000906,Dat Bike,val,1,1,0.92433485332978,T12,full_target_marked,sentiment,42
+C000907,VinFast,val,0,0,0.9918727327112832,T01,full_target_marked,sentiment,42
+C000911,Yadea,val,2,2,0.9907289910326461,T01,full_target_marked,sentiment,42
+C000921,VinFast,val,1,1,0.682558595726558,T01,full_target_marked,sentiment,42
+C000921,Yadea,val,2,1,0.4991275223916909,T01,full_target_marked,sentiment,42
+C000925,BYD,val,1,1,0.6626536438531546,T04,full_target_marked,sentiment,42
+C000925,Yadea,val,2,1,0.5707368996812413,T04,full_target_marked,sentiment,42
+C000946,Honda,val,1,0,0.6437159279644876,T05,full_target_marked,sentiment,42
+C000946,Toyota,val,0,0,0.6911218297241285,T05,full_target_marked,sentiment,42

@@ -1,0 +1,12 @@
+{
+  "sentiment": {
+    "type": "tfidf",
+    "model_path": "experiments/tfidf_sentiment_full_seed42.joblib"
+  },
+  "topic": {
+    "type": "tfidf",
+    "model_path": "experiments/tfidf_topic_target_context_seed42.joblib"
+  },
+  "sentiment_threshold": 0.6,
+  "topic_threshold": 0.6
+}

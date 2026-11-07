@@ -1,0 +1,272 @@
+[
+  {
+    "experiment_id": "tfidf_sentiment_full_seed43",
+    "task": "sentiment",
+    "model": "tfidf",
+    "variant": "full",
+    "seed": 43,
+    "test_macro_f1": 0.9635882158225754,
+    "test_accuracy": 0.9652777777777778
+  },
+  {
+    "experiment_id": "tfidf_sentiment_full_seed44",
+    "task": "sentiment",
+    "model": "tfidf",
+    "variant": "full",
+    "seed": 44,
+    "test_macro_f1": 0.9635882158225754,
+    "test_accuracy": 0.9652777777777778
+  },
+  {
+    "experiment_id": "tfidf_sentiment_brand_target_seed43",
+    "task": "sentiment",
+    "model": "tfidf",
+    "variant": "brand_target",
+    "seed": 43,
+    "test_macro_f1": 0.9575091575091573,
+    "test_accuracy": 0.9583333333333334
+  },
+  {
+    "experiment_id": "tfidf_sentiment_brand_target_seed44",
+    "task": "sentiment",
+    "model": "tfidf",
+    "variant": "brand_target",
+    "seed": 44,
+    "test_macro_f1": 0.9575091575091573,
+    "test_accuracy": 0.9583333333333334
+  },
+  {
+    "experiment_id": "tfidf_sentiment_target_context_seed43",
+    "task": "sentiment",
+    "model": "tfidf",
+    "variant": "target_context",
+    "seed": 43,
+    "test_macro_f1": 0.9448107448107447,
+    "test_accuracy": 0.9444444444444444
+  },
+  {
+    "experiment_id": "tfidf_sentiment_target_context_seed44",
+    "task": "sentiment",
+    "model": "tfidf",
+    "variant": "target_context",
+    "seed": 44,
+    "test_macro_f1": 0.9448107448107447,
+    "test_accuracy": 0.9444444444444444
+  },
+  {
+    "experiment_id": "tfidf_sentiment_target_only_seed43",
+    "task": "sentiment",
+    "model": "tfidf",
+    "variant": "target_only",
+    "seed": 43,
+    "test_macro_f1": 0.9512175455571681,
+    "test_accuracy": 0.9513888888888888
+  },
+  {
+    "experiment_id": "tfidf_sentiment_target_only_seed44",
+    "task": "sentiment",
+    "model": "tfidf",
+    "variant": "target_only",
+    "seed": 44,
+    "test_macro_f1": 0.9512175455571681,
+    "test_accuracy": 0.9513888888888888
+  },
+  {
+    "experiment_id": "tfidf_sentiment_brand_only_seed43",
+    "task": "sentiment",
+    "model": "tfidf",
+    "variant": "brand_only",
+    "seed": 43,
+    "test_macro_f1": 0.3030669699756385,
+    "test_accuracy": 0.3125
+  },
+  {
+    "experiment_id": "tfidf_sentiment_brand_only_seed44",
+    "task": "sentiment",
+    "model": "tfidf",
+    "variant": "brand_only",
+    "seed": 44,
+    "test_macro_f1": 0.3030669699756385,
+    "test_accuracy": 0.3125
+  },
+  {
+    "experiment_id": "tfidf_sentiment_context_only_seed43",
+    "task": "sentiment",
+    "model": "tfidf",
+    "variant": "context_only",
+    "seed": 43,
+    "test_macro_f1": 0.29289652108685993,
+    "test_accuracy": 0.3333333333333333
+  },
+  {
+    "experiment_id": "tfidf_sentiment_context_only_seed44",
+    "task": "sentiment",
+    "model": "tfidf",
+    "variant": "context_only",
+    "seed": 44,
+    "test_macro_f1": 0.29289652108685993,
+    "test_accuracy": 0.3333333333333333
+  },
+  {
+    "experiment_id": "tfidf_sentiment_full_masked_brand_seed43",
+    "task": "sentiment",
+    "model": "tfidf",
+    "variant": "full_masked_brand",
+    "seed": 43,
+    "test_macro_f1": 0.9708829876126153,
+    "test_accuracy": 0.9722222222222222
+  },
+  {
+    "experiment_id": "tfidf_sentiment_full_masked_brand_seed44",
+    "task": "sentiment",
+    "model": "tfidf",
+    "variant": "full_masked_brand",
+    "seed": 44,
+    "test_macro_f1": 0.9708829876126153,
+    "test_accuracy": 0.9722222222222222
+  },
+  {
+    "experiment_id": "tfidf_sentiment_full_target_marked_seed43",
+    "task": "sentiment",
+    "model": "tfidf",
+    "variant": "full_target_marked",
+    "seed": 43,
+    "test_macro_f1": 0.9635882158225754,
+    "test_accuracy": 0.9652777777777778
+  },
+  {
+    "experiment_id": "tfidf_sentiment_full_target_marked_seed44",
+    "task": "sentiment",
+    "model": "tfidf",
+    "variant": "full_target_marked",
+    "seed": 44,
+    "test_macro_f1": 0.9635882158225754,
+    "test_accuracy": 0.9652777777777778
+  },
+  {
+    "experiment_id": "tfidf_topic_target_context_seed43",
+    "task": "topic",
+    "model": "tfidf",
+    "variant": "target_context",
+    "seed": 43,
+    "test_macro_f1": 0.9853479853479854,
+    "test_accuracy": 0.9854014598540146
+  },
+  {
+    "experiment_id": "tfidf_topic_target_context_seed44",
+    "task": "topic",
+    "model": "tfidf",
+    "variant": "target_context",
+    "seed": 44,
+    "test_macro_f1": 0.9853479853479854,
+    "test_accuracy": 0.9854014598540146
+  },
+  {
+    "experiment_id": "tfidf_topic_target_only_seed43",
+    "task": "topic",
+    "model": "tfidf",
+    "variant": "target_only",
+    "seed": 43,
+    "test_macro_f1": 0.9929925147316451,
+    "test_accuracy": 0.9927007299270073
+  },
+  {
+    "experiment_id": "tfidf_topic_target_only_seed44",
+    "task": "topic",
+    "model": "tfidf",
+    "variant": "target_only",
+    "seed": 44,
+    "test_macro_f1": 0.9929925147316451,
+    "test_accuracy": 0.9927007299270073
+  },
+  {
+    "experiment_id": "tfidf_topic_context_only_seed43",
+    "task": "topic",
+    "model": "tfidf",
+    "variant": "context_only",
+    "seed": 43,
+    "test_macro_f1": 0.5643392495678754,
+    "test_accuracy": 0.5036496350364964
+  },
+  {
+    "experiment_id": "tfidf_topic_context_only_seed44",
+    "task": "topic",
+    "model": "tfidf",
+    "variant": "context_only",
+    "seed": 44,
+    "test_macro_f1": 0.5643392495678754,
+    "test_accuracy": 0.5036496350364964
+  },
+  {
+    "experiment_id": "tfidf_topic_target_context_marked_seed43",
+    "task": "topic",
+    "model": "tfidf",
+    "variant": "target_context_marked",
+    "seed": 43,
+    "test_macro_f1": 0.9853479853479854,
+    "test_accuracy": 0.9854014598540146
+  },
+  {
+    "experiment_id": "tfidf_topic_target_context_marked_seed44",
+    "task": "topic",
+    "model": "tfidf",
+    "variant": "target_context_marked",
+    "seed": 44,
+    "test_macro_f1": 0.9853479853479854,
+    "test_accuracy": 0.9854014598540146
+  },
+  {
+    "experiment_id": "tfidf_topic_target_context_masked_brand_seed43",
+    "task": "topic",
+    "model": "tfidf",
+    "variant": "target_context_masked_brand",
+    "seed": 43,
+    "test_macro_f1": 0.9926739926739927,
+    "test_accuracy": 0.9927007299270073
+  },
+  {
+    "experiment_id": "tfidf_topic_target_context_masked_brand_seed44",
+    "task": "topic",
+    "model": "tfidf",
+    "variant": "target_context_masked_brand",
+    "seed": 44,
+    "test_macro_f1": 0.9926739926739927,
+    "test_accuracy": 0.9927007299270073
+  },
+  {
+    "experiment_id": "tfidf_topic_target_masked_brand_seed43",
+    "task": "topic",
+    "model": "tfidf",
+    "variant": "target_masked_brand",
+    "seed": 43,
+    "test_macro_f1": 1.0,
+    "test_accuracy": 1.0
+  },
+  {
+    "experiment_id": "tfidf_topic_target_masked_brand_seed44",
+    "task": "topic",
+    "model": "tfidf",
+    "variant": "target_masked_brand",
+    "seed": 44,
+    "test_macro_f1": 1.0,
+    "test_accuracy": 1.0
+  },
+  {
+    "experiment_id": "tfidf_topic_context_masked_brand_seed43",
+    "task": "topic",
+    "model": "tfidf",
+    "variant": "context_masked_brand",
+    "seed": 43,
+    "test_macro_f1": 0.5829752113072855,
+    "test_accuracy": 0.5255474452554745
+  },
+  {
+    "experiment_id": "tfidf_topic_context_masked_brand_seed44",
+    "task": "topic",
+    "model": "tfidf",
+    "variant": "context_masked_brand",
+    "seed": 44,
+    "test_macro_f1": 0.5829752113072855,
+    "test_accuracy": 0.5255474452554745
+  }
+]

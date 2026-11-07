@@ -1,0 +1,21 @@
+numpy>=2.0
+pandas>=2.2
+scikit-learn>=1.5
+scipy>=1.14
+joblib>=1.4
+openpyxl>=3.1
+matplotlib>=3.9
+seaborn>=0.13
+tabulate>=0.9
+PyYAML>=6.0
+pyvi>=0.1.1
+torch>=2.4
+transformers>=5.0
+datasets>=3.0
+accelerate>=1.0
+peft>=0.14
+sentencepiece>=0.2
+protobuf>=5.0
+pytest>=8.0
+# QLoRA on Linux/CUDA only; not required for TF-IDF or full-precision encoder runs.
+bitsandbytes>=0.45; platform_system == "Linux"

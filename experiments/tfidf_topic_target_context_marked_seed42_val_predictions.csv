@@ -1,0 +1,138 @@
+comment_id,split,y_true,y_pred,confidence,topic_id,brands,variant,task,seed
+C000007,val,0,0,0.8674197287794431,T01,Yadea,target_context_marked,topic,42
+C000009,val,5,5,0.585732732019956,T06,Dat Bike,target_context_marked,topic,42
+C000018,val,12,12,0.8830354493894378,T13,VinFast,target_context_marked,topic,42
+C000022,val,3,3,0.8634910918576427,T04,VinFast,target_context_marked,topic,42
+C000030,val,9,9,0.8768618232792066,T10,Toyota,target_context_marked,topic,42
+C000034,val,1,1,0.879538962235291,T02,Yadea,target_context_marked,topic,42
+C000037,val,1,1,0.93662310796958,T02,VinFast,target_context_marked,topic,42
+C000049,val,1,1,0.9217910443717011,T02,VinFast,target_context_marked,topic,42
+C000054,val,0,0,0.9288959590153536,T01,Yadea,target_context_marked,topic,42
+C000057,val,2,2,0.8748572258018856,T03,Honda,target_context_marked,topic,42
+C000060,val,5,5,0.9043309675510528,T06,Dat Bike,target_context_marked,topic,42
+C000063,val,9,9,0.9473810362549568,T10,Honda,target_context_marked,topic,42
+C000073,val,3,3,0.7548486824744532,T04,Hyundai,target_context_marked,topic,42
+C000089,val,8,8,0.8818284225690182,T09,BYD,target_context_marked,topic,42
+C000102,val,6,6,0.9218933787290314,T07,Toyota,target_context_marked,topic,42
+C000118,val,1,1,0.8853484597741406,T02,Yadea,target_context_marked,topic,42
+C000119,val,8,8,0.8275875645688421,T09,BYD,target_context_marked,topic,42
+C000125,val,9,9,0.8833828055095965,T10,Yadea,target_context_marked,topic,42
+C000128,val,0,0,0.8821802862275453,T01,Yadea,target_context_marked,topic,42
+C000132,val,9,9,0.87257686186241,T10,Toyota,target_context_marked,topic,42
+C000135,val,5,5,0.870949043041297,T06,VinFast,target_context_marked,topic,42
+C000142,val,11,11,0.8337384666947539,T12,Honda,target_context_marked,topic,42
+C000148,val,2,2,0.9497784913211748,T03,Hyundai,target_context_marked,topic,42
+C000152,val,1,1,0.9349790332675013,T02,VinFast,target_context_marked,topic,42
+C000158,val,5,5,0.8193065454698892,T06,Dat Bike,target_context_marked,topic,42
+C000162,val,5,5,0.9199118422537401,T06,VinFast,target_context_marked,topic,42
+C000170,val,8,8,0.9364140117378946,T09,Hyundai,target_context_marked,topic,42
+C000179,val,4,4,0.8837494723909027,T05,VinFast,target_context_marked,topic,42
+C000181,val,10,10,0.9019563881571592,T11,BYD,target_context_marked,topic,42
+C000182,val,11,11,0.8582014952472976,T12,Honda,target_context_marked,topic,42
+C000185,val,6,6,0.9223425023188008,T07,Toyota,target_context_marked,topic,42
+C000200,val,1,1,0.5765891889901583,T02,Yadea,target_context_marked,topic,42
+C000209,val,4,4,0.9459056186534399,T05,Hyundai,target_context_marked,topic,42
+C000211,val,10,10,0.8521913336801213,T11,Honda,target_context_marked,topic,42
+C000218,val,5,5,0.8761367693858221,T06,BYD,target_context_marked,topic,42
+C000225,val,2,2,0.9191994408250878,T03,Toyota,target_context_marked,topic,42
+C000240,val,0,0,0.9238074687910278,T01,Dat Bike,target_context_marked,topic,42
+C000245,val,3,3,0.8686364470682056,T04,Hyundai,target_context_marked,topic,42
+C000252,val,6,6,0.9259794898845982,T07,BYD,target_context_marked,topic,42
+C000253,val,6,6,0.9409111074328292,T07,BYD,target_context_marked,topic,42
+C000263,val,6,6,0.8823473617268034,T07,VinFast,target_context_marked,topic,42
+C000270,val,5,5,0.8606839119772056,T06,BYD,target_context_marked,topic,42
+C000279,val,7,7,0.7800155476307618,T08,Honda,target_context_marked,topic,42
+C000281,val,11,11,0.8533260769719023,T12,Dat Bike,target_context_marked,topic,42
+C000299,val,7,7,0.8619642251533524,T08,Honda,target_context_marked,topic,42
+C000315,val,6,6,0.8293488050993267,T07,VinFast,target_context_marked,topic,42
+C000318,val,4,4,0.8152091674618832,T05,VinFast,target_context_marked,topic,42
+C000325,val,0,0,0.9382033458721816,T01,Dat Bike,target_context_marked,topic,42
+C000329,val,10,10,0.9300264097630525,T11,Dat Bike,target_context_marked,topic,42
+C000331,val,4,4,0.7767458153425594,T05,Honda,target_context_marked,topic,42
+C000334,val,9,9,0.8879042573518804,T10,Yadea,target_context_marked,topic,42
+C000335,val,6,6,0.9195587004398655,T07,Toyota,target_context_marked,topic,42
+C000339,val,3,3,0.9195692975857498,T04,VinFast,target_context_marked,topic,42
+C000347,val,1,1,0.48584852851313265,T02,Yadea,target_context_marked,topic,42
+C000348,val,8,8,0.9053744370750968,T09,BYD,target_context_marked,topic,42
+C000357,val,10,10,0.677725926375785,T11,Dat Bike,target_context_marked,topic,42
+C000358,val,8,8,0.9272156130969185,T09,Hyundai,target_context_marked,topic,42
+C000368,val,0,0,0.8778546822474732,T01,Yadea,target_context_marked,topic,42
+C000371,val,2,2,0.9172807602273366,T03,Toyota,target_context_marked,topic,42
+C000375,val,0,0,0.9128015476180728,T01,Dat Bike,target_context_marked,topic,42
+C000384,val,12,12,0.9370983530851431,T13,VinFast,target_context_marked,topic,42
+C000387,val,4,4,0.9377683819541525,T05,Hyundai,target_context_marked,topic,42
+C000390,val,7,7,0.910146686888888,T08,VinFast,target_context_marked,topic,42
+C000405,val,10,10,0.9182705950415047,T11,Dat Bike,target_context_marked,topic,42
+C000420,val,6,6,0.9127573240172361,T07,BYD,target_context_marked,topic,42
+C000429,val,9,9,0.9336996954587663,T10,Honda,target_context_marked,topic,42
+C000442,val,5,5,0.9420126826015215,T06,Dat Bike,target_context_marked,topic,42
+C000448,val,7,7,0.9205204380663615,T08,BYD,target_context_marked,topic,42
+C000450,val,3,3,0.7245866046792515,T04,Hyundai,target_context_marked,topic,42
+C000456,val,3,3,0.9238995346185458,T04,Yadea,target_context_marked,topic,42
+C000457,val,2,2,0.8414274996794222,T03,VinFast,target_context_marked,topic,42
+C000458,val,7,7,0.8903404856369429,T08,Honda,target_context_marked,topic,42
+C000459,val,10,10,0.9295206306679832,T11,Dat Bike,target_context_marked,topic,42
+C000482,val,8,8,0.8836026857696595,T09,BYD,target_context_marked,topic,42
+C000490,val,5,5,0.9131429838353785,T06,Dat Bike,target_context_marked,topic,42
+C000493,val,2,2,0.88813500319286,T03,VinFast,target_context_marked,topic,42
+C000494,val,10,10,0.8922424121313116,T11,Dat Bike,target_context_marked,topic,42
+C000496,val,11,11,0.6422715683547748,T12,VinFast,target_context_marked,topic,42
+C000501,val,7,7,0.9201036943000336,T08,BYD,target_context_marked,topic,42
+C000509,val,11,11,0.8210958881836915,T12,Dat Bike,target_context_marked,topic,42
+C000523,val,4,4,0.9292782367631601,T05,Hyundai,target_context_marked,topic,42
+C000538,val,5,5,0.8896647301337087,T06,Hyundai,target_context_marked,topic,42
+C000548,val,8,8,0.9170951450643616,T09,Hyundai,target_context_marked,topic,42
+C000551,val,7,7,0.89083138660039,T08,Honda,target_context_marked,topic,42
+C000561,val,9,9,0.8979269870310852,T10,Toyota,target_context_marked,topic,42
+C000571,val,1,1,0.9335431754546901,T02,VinFast,target_context_marked,topic,42
+C000575,val,10,10,0.9151714820600562,T11,Toyota,target_context_marked,topic,42
+C000603,val,7,7,0.9127910472977808,T08,BYD,target_context_marked,topic,42
+C000604,val,2,2,0.8414274996794222,T03,VinFast,target_context_marked,topic,42
+C000619,val,3,3,0.8749489895032411,T04,VinFast,target_context_marked,topic,42
+C000625,val,8,8,0.8733658549457738,T09,Honda,target_context_marked,topic,42
+C000628,val,12,12,0.8745397579312222,T13,Yadea,target_context_marked,topic,42
+C000635,val,4,4,0.9552153423630716,T05,Toyota,target_context_marked,topic,42
+C000636,val,12,12,0.8179936750150324,T13,Yadea,target_context_marked,topic,42
+C000637,val,9,9,0.6146592500456914,T10,Yadea,target_context_marked,topic,42
+C000638,val,8,8,0.8117013559135592,T09,VinFast,target_context_marked,topic,42
+C000647,val,1,1,0.9380979045347916,T02,VinFast,target_context_marked,topic,42
+C000649,val,1,1,0.9496768085428089,T02,VinFast,target_context_marked,topic,42
+C000651,val,12,12,0.8850296151598257,T13,Yadea,target_context_marked,topic,42
+C000653,val,3,3,0.906237139480098,T04,Yadea,target_context_marked,topic,42
+C000660,val,6,6,0.8981918581079705,T07,Yadea,target_context_marked,topic,42
+C000665,val,12,12,0.9357709456553694,T13,VinFast,target_context_marked,topic,42
+C000668,val,5,5,0.9055510007273453,T06,BYD,target_context_marked,topic,42
+C000669,val,2,2,0.853748321538621,T03,BYD,target_context_marked,topic,42
+C000673,val,4,4,0.9065682010793911,T05,Dat Bike,target_context_marked,topic,42
+C000684,val,1,1,0.8647048434950246,T02,Yadea,target_context_marked,topic,42
+C000693,val,12,12,0.9405988705741262,T13,VinFast,target_context_marked,topic,42
+C000710,val,10,10,0.9152675878103241,T11,Toyota,target_context_marked,topic,42
+C000711,val,12,12,0.9309018243202923,T13,VinFast,target_context_marked,topic,42
+C000723,val,12,12,0.9106286280683996,T13,Yadea,target_context_marked,topic,42
+C000728,val,11,11,0.9053924928771268,T12,Yadea,target_context_marked,topic,42
+C000732,val,10,10,0.937592371743451,T11,Honda,target_context_marked,topic,42
+C000734,val,3,3,0.9271149654905978,T04,Yadea,target_context_marked,topic,42
+C000738,val,3,3,0.6888798457685326,T04,Hyundai,target_context_marked,topic,42
+C000748,val,6,6,0.9372714510656918,T07,VinFast,target_context_marked,topic,42
+C000774,val,2,2,0.588809080501479,T03,BYD,target_context_marked,topic,42
+C000779,val,11,11,0.915462836514415,T12,Honda,target_context_marked,topic,42
+C000780,val,9,9,0.5655414766277413,T10,Toyota,target_context_marked,topic,42
+C000792,val,7,7,0.8962736566748638,T08,Honda,target_context_marked,topic,42
+C000800,val,12,12,0.9214786849294295,T13,Yadea,target_context_marked,topic,42
+C000803,val,0,0,0.9249510121607596,T01,Dat Bike,target_context_marked,topic,42
+C000805,val,8,8,0.8594759137230391,T09,Honda,target_context_marked,topic,42
+C000812,val,4,4,0.8248276352036782,T05,Dat Bike,target_context_marked,topic,42
+C000813,val,11,11,0.9300682193962659,T12,Dat Bike,target_context_marked,topic,42
+C000843,val,12,12,0.9219457897715282,T13,Yadea,target_context_marked,topic,42
+C000848,val,10,10,0.9073831753185395,T11,Dat Bike,target_context_marked,topic,42
+C000858,val,11,11,0.7050030397749819,T12,Honda,target_context_marked,topic,42
+C000871,val,2,2,0.8236871634432488,T03,BYD,target_context_marked,topic,42
+C000873,val,7,7,0.9160063727322431,T08,Honda,target_context_marked,topic,42
+C000884,val,9,9,0.8477990802614399,T10,Dat Bike,target_context_marked,topic,42
+C000888,val,4,4,0.84139971546137,T05,Honda,target_context_marked,topic,42
+C000906,val,11,11,0.934198639264245,T12,Dat Bike,target_context_marked,topic,42
+C000907,val,0,0,0.8418252910807557,T01,VinFast,target_context_marked,topic,42
+C000911,val,0,0,0.904086283445618,T01,Yadea,target_context_marked,topic,42
+C000921,val,0,0,0.9415962129148759,T01,VinFast|Yadea,target_context_marked,topic,42
+C000925,val,3,3,0.955427686137825,T04,BYD|Yadea,target_context_marked,topic,42
+C000946,val,4,4,0.951127893964186,T05,Honda|Toyota,target_context_marked,topic,42

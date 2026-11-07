@@ -1,0 +1,6 @@
+comment_id,brand,sentiment,topic
+C000001,Honda,"{'label': 2, 'name': 'Neutral', 'confidence': 0.6824956680196377, 'low_confidence': False}","{'label': 4, 'topic_id': 'T05', 'name': 'Hệ thống Xưởng Dịch vụ (XDV)', 'confidence': 0.6293402159094531, 'low_confidence': False}"
+C000002,Dat Bike,"{'label': 0, 'name': 'Negative', 'confidence': 0.9534850633559483, 'low_confidence': False}","{'label': 6, 'topic_id': 'T07', 'name': 'Thái độ và chuyên môn của nhân sự XDV', 'confidence': 0.6382065542306824, 'low_confidence': False}"
+C000003,Yadea,"{'label': 0, 'name': 'Negative', 'confidence': 0.4823542934578567, 'low_confidence': True}","{'label': 1, 'topic_id': 'T02', 'name': 'Chất lượng hạ tầng Sạc/ Đổi Pin', 'confidence': 0.9136271467436369, 'low_confidence': False}"
+C000004,Hyundai,"{'label': 2, 'name': 'Neutral', 'confidence': 0.9692145762990313, 'low_confidence': False}","{'label': 8, 'topic_id': 'T09', 'name': 'Chính sách cứu hộ, hỗ trợ khẩn cấp', 'confidence': 0.9022348029819632, 'low_confidence': False}"
+C000005,VinFast,"{'label': 1, 'name': 'Positive', 'confidence': 0.9885810309464738, 'low_confidence': False}","{'label': 2, 'topic_id': 'T03', 'name': 'Chính sách hậu mãi (bảo hành, bảo dưỡng, sửa chữa)', 'confidence': 0.8977456857299225, 'low_confidence': False}"
